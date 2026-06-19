@@ -1,0 +1,26 @@
+<h1>Yemekler</h1>
+<button routerLink="./create">+ Yeni Yemek</button>
+<table>
+  <thead>
+    <tr>
+        <th>İsim</th>
+        <th>Açıklama</th>
+        <th>Fiyat</th>
+        <th>Resim</th>
+        <th>Kategori</th>
+        <th>İşlemler</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (food of foods(); track food.id) {
+      <tr app-food-layout 
+        [id]="food.id"
+        [name]="food.name"
+        [description]="food.description"
+        [price]="food.price"
+        [imageUrl]="food.imageUrl"
+        [category]="food.category">
+      </tr> 
+    }
+  </tbody>
+</table>

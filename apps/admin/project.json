@@ -6,6 +6,9 @@
   "sourceRoot": "apps/admin/src",
   "tags": [],
   "targets": {
+    "options": {
+      "baseHref": "/"
+    },
     "build": {
       "executor": "@angular/build:application",
       "outputs": [

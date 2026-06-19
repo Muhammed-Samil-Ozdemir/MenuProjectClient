@@ -2,10 +2,7 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "analytics": false,
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -16,13 +13,8 @@
   "targetDefaults": {
     "@angular/build:application": {
       "cache": true,
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "production",
-        "^production"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     },
     "@nx/eslint:lint": {
       "cache": true,
@@ -40,7 +32,24 @@
     "@nx/angular:application": {
       "e2eTestRunner": "none",
       "linter": "eslint",
-      "style": "css",
+      "unitTestRunner": "vitest-angular",
+      "changeDetection": "OnPush",
+      "viewEncapsulation": "None",
+      "skipTests": true,
+      "skipSelector": true,
+      "exportDefault": true,
+      "style": "none"
+    },
+    "@nx/angular:component": {
+      "style": "none",
+      "changeDetection": "OnPush",
+      "viewEncapsulation": "None",
+      "skipTests": true,
+      "skipSelector": true,
+      "exportDefault": true
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
       "unitTestRunner": "none"
     }
   }

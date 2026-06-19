@@ -1,0 +1,6 @@
+<h1>Yeni Kategori</h1>
+<form #form="ngForm" (ngSubmit)="create(form)">
+  <input [(ngModel)]="name" name="name" type="text" placeholder="Kategori Adı" />
+  <button type="submit">Oluştur</button>
+</form>
+  <button routerLink="/categories">Geri</button>

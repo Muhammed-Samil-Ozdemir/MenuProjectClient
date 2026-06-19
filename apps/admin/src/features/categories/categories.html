@@ -1,0 +1,14 @@
+<h1>Kategoriler</h1>
+<button routerLink="./create">+ Yeni Kategori</button>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (category of categories(); track category.id) {
+      <tr app-category-layout [id]="category.id!" [name]="category.name!"></tr> 
+    }
+  </tbody>
+</table>

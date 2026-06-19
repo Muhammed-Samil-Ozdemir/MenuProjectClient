@@ -1,0 +1,15 @@
+<h1>Yeni Yemek</h1>
+<form #form="ngForm" (ngSubmit)="update(form)">
+  <input [(ngModel)]="name" name="name" type="text" placeholder="Yemek Adı" />
+  <input [(ngModel)]="description" name="description" type="text" placeholder="Açıklama" />
+  <input [(ngModel)]="price" name="price" type="number" placeholder="Fiyat" />
+  <input [(ngModel)]="imageUrl" name="imageUrl" type="text" placeholder="Resim URL" />
+  <select [(ngModel)]="category" name="categoryId">
+    <option value="" disabled selected>Kategori Seçin</option>
+    @for (cat of categories(); track cat.id) {
+      <option [value]="cat.id">{{ cat.name }}</option>
+    }
+  </select>
+  <button type="submit">Oluştur</button>
+</form>
+<button routerLink="/foods">Geri</button>

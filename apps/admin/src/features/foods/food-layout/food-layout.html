@@ -1,0 +1,6 @@
+<td><img [src]="imageUrl()" [alt]="name()" width="100" height="100"></td>
+<td>{{ name() }}</td>
+<td>{{ description() }}</td>
+<td>₺ {{ price() }}</td>
+<td>{{ category()?.name || 'Kategori Belirtilmemiş' }}</td>
+<td><button [routerLink]="['/foods/update', id()]">Düzenle</button><button (click)="delete(id())">Sil</button></td>
