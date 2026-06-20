@@ -1,0 +1,6 @@
+<h1>Sosyal Medya Güncelle</h1>
+<form #form="ngForm" (ngSubmit)="update(form)">
+    <input type="text" placeholder="Sosyal Medya Adı" [(ngModel)]="name" name="name" required>
+    <input type="text" placeholder="Sosyal Medya URL" [(ngModel)]="url" name="url" required>
+    <button type="submit">Kaydet</button>
+</form>

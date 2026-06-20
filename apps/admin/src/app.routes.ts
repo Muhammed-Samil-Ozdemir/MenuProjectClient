@@ -21,6 +21,10 @@ export const appRoutes: Route[] = [
                 path: 'foods',
                 loadChildren: () => import('./features/foods/router'),
             },
+            {
+                path: 'social-medias',
+                loadChildren: () => import('./features/social-medias/router'),
+            }
         ]
     }
 ];

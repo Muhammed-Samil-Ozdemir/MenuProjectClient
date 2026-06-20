@@ -26,19 +26,22 @@
         "{workspaceRoot}/eslint.config.mjs",
         "{workspaceRoot}/tools/eslint-rules/**/*"
       ]
+    },
+    "@angular/build:unit-test": {
+      "cache": true,
+      "inputs": ["default", "^production"]
     }
   },
   "generators": {
     "@nx/angular:application": {
       "e2eTestRunner": "none",
       "linter": "eslint",
-      "unitTestRunner": "vitest-angular",
-      "changeDetection": "OnPush",
-      "viewEncapsulation": "None",
-      "skipTests": true,
-      "skipSelector": true,
-      "exportDefault": true,
-      "style": "none"
+      "style": "css",
+      "unitTestRunner": "none"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "none"
     },
     "@nx/angular:component": {
       "style": "none",
@@ -48,9 +51,20 @@
       "skipSelector": true,
       "exportDefault": true
     },
-    "@nx/angular:library": {
-      "linter": "eslint",
-      "unitTestRunner": "none"
+    "@schematics/angular:service": {
+      "skipTests": true
+    },
+    "@schematics/angular:pipe": {
+      "skipTests": true
+    },
+    "@schematics/angular:directive": {
+      "skipTests": true
+    },
+    "@schematics/angular:interceptor": {
+      "skipTests": true
+    },
+    "@schematics/angular:guard": {
+      "skipTests": true
     }
   }
 }

@@ -1,0 +1,21 @@
+<h1>Sosyal Medya</h1>
+
+@for (socialMedia of socialMedias(); track socialMedia.id) {
+    <h1>{{ socialMedia.name }}</h1>
+    <p>{{ socialMedia.url }}</p>
+}
+
+@for (category of categories(); track category.id) {
+    <h1>{{ category.name }}</h1>
+    <div style="display: flex;">
+        @for (food of category.foods; track $index) {
+            <app-food-layout
+            [id]="food.id"
+            [name]="food.name"
+            [description]="food.description"
+            [price]="food.price"
+            [imageUrl]="food.imageUrl"
+            />
+        }
+    </div>
+}

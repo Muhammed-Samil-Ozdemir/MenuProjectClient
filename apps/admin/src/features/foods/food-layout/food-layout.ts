@@ -22,6 +22,7 @@ export default class FoodLayout {
   readonly description = input<string>("");
   readonly price = input<number>(0);
   readonly imageUrl = input<string>("");
+  readonly isActive = input<boolean>(true);
   readonly category = input<Category | null>(null);
 
   readonly #http = inject(HttpService);

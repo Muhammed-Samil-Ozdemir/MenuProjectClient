@@ -1,0 +1,15 @@
+<h1>Sosyal Medya</h1>
+<button routerLink="./create">+ Yeni Sosyal Medya</button>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (socialMedia of socialMedias(); track socialMedia.id) {
+      <tr app-social-media-layout [id]="socialMedia.id!" [name]="socialMedia.name!" [url]="socialMedia.url!"></tr> 
+    }
+  </tbody>
+</table>

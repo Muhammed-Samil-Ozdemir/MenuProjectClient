@@ -1,0 +1,6 @@
+<h1>Sosyal Medya Oluştur</h1>
+<form #form="ngForm" (ngSubmit)="create(form)">
+    <input type="text" placeholder="Sosyal Medya Adı" [(ngModel)]="name" name="name" required>
+    <input type="text" placeholder="Sosyal Medya URL" [(ngModel)]="url" name="url" required>
+    <button type="submit">Kaydet</button>
+</form>

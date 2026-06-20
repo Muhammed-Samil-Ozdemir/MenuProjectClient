@@ -4,10 +4,11 @@
   <input [(ngModel)]="description" name="description" type="text" placeholder="Açıklama" />
   <input [(ngModel)]="price" name="price" type="number" placeholder="Fiyat" />
   <input [(ngModel)]="imageUrl" name="imageUrl" type="text" placeholder="Resim URL" />
+  <input [(ngModel)]="isActive" name="isActive" type="checkbox" /> Aktif
   <select [(ngModel)]="category" name="categoryId">
     <option value="" disabled selected>Kategori Seçin</option>
     @for (cat of categories(); track cat.id) {
-      <option [value]="cat.id">{{ cat.name }}</option>
+    <option [value]="cat.id">{{ cat.name }}</option>
     }
   </select>
   <button type="submit">Oluştur</button>

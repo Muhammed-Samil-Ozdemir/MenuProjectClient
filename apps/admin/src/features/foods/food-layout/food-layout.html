@@ -2,5 +2,6 @@
 <td>{{ name() }}</td>
 <td>{{ description() }}</td>
 <td>₺ {{ price() }}</td>
+<td>{{ isActive() ? 'Aktif' : 'Pasif' }}</td>
 <td>{{ category()?.name || 'Kategori Belirtilmemiş' }}</td>
 <td><button [routerLink]="['/foods/update', id()]">Düzenle</button><button (click)="delete(id())">Sil</button></td>

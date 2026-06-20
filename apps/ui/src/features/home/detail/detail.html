@@ -1,0 +1,5 @@
+<img src="{{ imageUrl() }}" alt="{{ name() }}" />
+<h1>Adı: {{ name() }}</h1>
+<h2>Tür: {{ category()?.name || 'Kategori Bulunamadı' }}</h2>
+<h3>Açıklama: {{ description() }}</h3>
+<h3>Fiyat: ₺ {{ price() }}</h3>

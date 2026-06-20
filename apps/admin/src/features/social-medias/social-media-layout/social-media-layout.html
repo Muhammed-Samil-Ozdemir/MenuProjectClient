@@ -1,0 +1,6 @@
+<td>{{ name() }}</td>
+<td>{{ url() }}</td>
+<td>
+    <button [routerLink]="['/social-medias/update', id()]">Düzenle</button>
+    <button (click)="delete(id())">Sil</button>
+</td>
